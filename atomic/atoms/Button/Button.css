@@ -1,13 +1,9 @@
-:root {
-    --medium-purple: #9879e9;
-    --white: #fff;
-    --white-lilac: #e8e8e8
-}
 .button {
     border: 1px solid transparent;
     padding: 10px 85px;
     border-radius: 30px;
-    box-shadow: 0px 4px 5px var(--white-lilac) ;
+    box-shadow: 0px 4px 5px var(--white-lilac);
+    cursor: pointer;
 }
 
 .type-primary {
@@ -15,9 +11,22 @@
     color: var(--white);
 }
 
+
+.button:hover {
+    filter:brightness(1.1) 
+}
+
+
+.button:active {
+    filter:brightness(0.9) 
+}
+
+
+
 .type-secondary {
     background:  transparent;
     color: var(--medium-purple);
     border: 1px solid var(--medium-purple);
 
 }
+
