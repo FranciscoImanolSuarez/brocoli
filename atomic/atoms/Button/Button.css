@@ -1,13 +1,24 @@
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid  var(--colors-transparent);;
-    padding: 10px 85px;
-    border-radius: 30px;
+    padding: 10px 20px;
+    border-radius: 30px; /*FIXME use design token*/
     box-shadow: 0px 4px 5px var(--colors-brand-white-lilac);
     cursor: pointer;
     font-size: var(--font-size-2xl);
     transition: all 0.5s ease;
+    max-width: 300px;
+    width: 100%;
+    min-width: max-content;
+    /*TODO Implement min width behaviour*/
+
 }
 
+.is-block {
+    width: 100%;
+}
 .type-primary {
     background:   var(--colors-brand-medium-purple);
     color: var(--colors-white);

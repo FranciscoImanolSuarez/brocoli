@@ -12,5 +12,3 @@ export const Primary = () => (<Button type="primary">Button Primary</Button>)
 export const Secondary = () => (<Button type="secondary">Button Secondary</Button>)
 
 export const Tertiary = () => (<Button type="tertiary">Button Tertiary</Button>)
-
-export const WithIcon = () => (<Button type="secondary">Button Icon <Icon type="arrow-right-solid"/></Button>)

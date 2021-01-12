@@ -7,4 +7,4 @@ export default {
 }
 
 
-export const Default = () => (<Icon type="right-arrow"> Icon </Icon>)
+export const Default = () => (<Icon type="rightArrow"> Icon </Icon>)
