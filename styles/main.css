@@ -1,11 +1,13 @@
-html,body {
-    font-size: var(--font-size-base)
+html,
+body {
+  font-size: var(--font-size-base);
 }
-
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }

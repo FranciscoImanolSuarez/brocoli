@@ -2,9 +2,8 @@ import React from 'react'
 import Icon from '../../atomic/atoms/Icon'
 
 export default {
-    title: 'Atoms/Icon',
-    component: Icon
+  title: 'Atoms/Icon',
+  component: Icon,
 }
 
-
-export const Default = () => (<Icon type="rightArrow"> Icon </Icon>)
+export const Default = () => <Icon type="rightArrow"> Icon </Icon>
