@@ -1,5 +1,3 @@
-<p align="center">
-  <h1>Broccoli - UI 🥦</h1>
-</p>
+<h1 align="center">Broccoli - UI 🥦</h1>
 
-<h1 align="center">Create React applications the easy way🚀</h1>
+<h3 align="center">Create React applications the easy way🚀</h3>
