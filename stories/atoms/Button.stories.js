@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../../atomic/atoms/Button'
 import Icon from '../../atomic/atoms/Icon'
+
 export default {
     title: 'Atoms/Button',
     component: Button
