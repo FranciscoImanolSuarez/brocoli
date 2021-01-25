@@ -1,0 +1,11 @@
+import React from 'react'
+import Picture from '../../atomic/atoms/Picture'
+
+export default {
+  title: 'Atoms/Picture',
+  component: Picture,
+}
+
+export const Default = () => (
+  <Picture src="http://placeimg.com/400/400/any" width={200} />
+)

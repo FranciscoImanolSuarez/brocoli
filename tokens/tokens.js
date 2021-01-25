@@ -2,9 +2,14 @@ const choices = {
   colors: {
     brand: {
       mediumPurple: ' #9879e9',
-      white: '#fff',
+      mandy: '#eb4e58',
+      hintOfRed: '#f9f9f9',
+      regentGray: '#7e858c',
+      romance: '#fcfdfd',
       whiteLilac: '#e8e8e8',
       eastBay: '#455970',
+      loblolly: '#b7b7b7',
+      blueMoon: '#eff1fd',
     },
 
     transparent: 'transparent',
@@ -159,9 +164,9 @@ const choices = {
     },
   },
   fontFamily: {
-    serif: ['Roboto Slab', '"Times New Roman"', 'serif'],
-    sans: ['Apercu', 'Arial', 'sans-serif'],
-    mono: ['"Roboto Mono"', 'Consolas', 'monospace'],
+    // serif: ['Roboto Slab', '"Times New Roman"', 'serif'],
+    sans: ['Quicksand', 'Arial', 'sans-serif'],
+    // mono: ['"Roboto Mono"', 'Consolas', 'monospace'],
   },
   fontSize: {
     base: '10px',
@@ -244,7 +249,7 @@ const choices = {
     none: '0',
     sm: '0.125rem',
     md: '0.25rem',
-    lg: '0.5rem',
+    lg: '30px',
     full: '9999px',
   },
   zIndex: {
@@ -261,6 +266,15 @@ const choices = {
 const decisions = {
   colors: {
     primary: choices.colors.brand.mediumPurple,
+    primaryHighlight: choices.colors.brand.blueMoon,
+    secondary: choices.colors.brand.mandy,
+    fontBase: choices.colors.brand.eastBay,
+    fontMuted: choices.colors.brand.regentGray,
+    fontHighlight: choices.colors.brand.loblolly,
+  },
+  backgrounds: {
+    primary: choices.colors.brand.hintOfRed,
+    highlight: choices.colors.brand.romance,
   },
 }
 
