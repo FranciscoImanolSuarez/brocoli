@@ -1,25 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { choices } from '../../../tokens/tokens'
 import Horizontal from './Horizontal'
 import Vertical from './Vertical'
 
 import classNames from 'classnames'
-import './Spacer.css'
+import styles from './Spacer.module.css'
 
-const getSize = (size) => choices.spacing[size]
+import { getSize } from "./helpers";
 
 const Spacer = ({ size, isVisible }) => (
-  <div
-    className={classNames('spacer', {
-      'is-visible': isVisible,
-    })}
-    style={{
-      display: 'inline-block',
-      width: getSize(size),
-      height: getSize(size),
-    }}
-  />
+    <div
+        className={classNames(styles.spacer, {
+            [styles['is-visible']]: isVisible,
+        })}
+        style={{
+            display: 'inline-block',
+            width: getSize(size),
+            height: getSize(size),
+        }}
+    />
 )
 
 Spacer.propTypes = {

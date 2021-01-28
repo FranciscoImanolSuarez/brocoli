@@ -2,12 +2,33 @@ import React from 'react'
 import Spacer from '../../atomic/layout/Spacer'
 
 export default {
-  title: 'Layout/Spacer',
+  title: 'Layout/Spacer/Default',
   component: Spacer,
+  args: {
+    isVisible: true,
+  },
 }
 
-export const Default = () => <Spacer size={12} isVisible />
-export const Horizontal = () => <Spacer.Horizontal size={12} isVisible />
-export const Vertical = () => (
-  <Spacer.Vertical size={12} isVisible maxHeight={200} />
-)
+const Template = (props) => <Spacer {...props} />
+
+export const Default = Template.bind({})
+
+export const ExtraSmall = Template.bind({})
+ExtraSmall.args = {
+  size: 'xs',
+}
+
+export const Small = Template.bind({})
+Small.args = {
+  size: 'sm',
+}
+
+export const Medium = Template.bind({})
+Medium.args = {
+  size: 'md',
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  size: 'lg',
+}

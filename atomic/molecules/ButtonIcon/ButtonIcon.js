@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 
 import Button from '../../atoms/Button'
 import Icon from '../../atoms/Icon'
+import Spacer from '../../layout/Spacer'
 const ButtonIcon = ({ children, type, icon }) => (
-  <Button type={type} isBlock={false}>
-    <span style={{ marginRight: 10 }}>{children}</span>
-    {/*FIXME: Add Vertical Spacer Component*/}
-    <Icon type={icon} />
-  </Button>
+    <Button type={type} isBlock={false}>
+        {children}
+        <Spacer.Vertical size="xs"></Spacer.Vertical>
+        <Icon type={icon} />
+    </Button>
 )
 
 ButtonIcon.propTypes = {

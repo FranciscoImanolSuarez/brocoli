@@ -1,5 +1,5 @@
 import React from 'react'
-import Input from '../../atomic/atoms/Input'
+import Input from '../../atomic/atoms/Input/'
 
 export default {
   title: 'Atoms/Input',
@@ -7,5 +7,5 @@ export default {
 }
 
 export const Text = () => (
-  <Input onChange={() => {}} type="text" placeholder="Nombres" />
+    <Input onChange={() => {}} type="text" placeholder="Nombres" />
 )

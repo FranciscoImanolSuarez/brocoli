@@ -1,13 +1,5 @@
-html,
-body {
-  font-size: var(--font-size-base);
-}
 
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+html, body {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-sans);
 }

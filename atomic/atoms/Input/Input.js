@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Input.css'
+import styles from './Input.module.css'
 
 const Input = ({ type, onChange, placeholder }) => (
-  <input
-    className="input"
-    type={type}
-    placeholder={placeholder}
-    onChange={onChange}
-  ></input>
+    <input
+        className={styles.input}
+        type={type}
+        placeholder={placeholder}
+        onChange={onChange}
+    ></input>
 )
 
 Input.defaultProps = {

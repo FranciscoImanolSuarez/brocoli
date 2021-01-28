@@ -2,27 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import './Button.css'
+import styles from './Button.module.css'
 
-const Button = ({ type, children, isBlock }) => (
-  <button
-    className={classNames('button', {
-      [`type-${type}`]: type,
-      'is-block': isBlock && type !== 'tertiary',
-    })}
-  >
-    {children}
-  </button>
+const Button = ({ type, children, isBlock, onClick }) => (
+    <button
+        className={classNames(styles.button, {
+            [styles[`type-${type}`]]: type,
+            [styles['is-block']]: isBlock && type !== 'tertiary',
+        })}
+        onClick={onClick}
+    >
+        {children}
+    </button>
 )
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf[('primary', 'secondary', 'tertiary')],
-  isBlock: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    type: PropTypes.oneOf[('primary', 'secondary', 'tertiary')],
+    onClick: PropTypes.func,
+    isBlock: PropTypes.boolean,
 }
 
 Button.defaultProps = {
-  type: 'primary',
-  isBlock: true,
+    isBlock: true,
+    onClick: () => {},
 }
+
 export default Button

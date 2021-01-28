@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { choices } from '../../../tokens/tokens'
 import classNames from 'classnames'
-import './Spacer.css'
+import './Spacer.module.css'
 
-const getSize = (size) => choices.spacing[size]
+import { getSize } from "./helpers";
 
 const Horizontal = ({ size, isVisible }) => (
   <div
