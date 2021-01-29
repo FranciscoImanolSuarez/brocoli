@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 
 const Input = ({ type, onChange, placeholder }) => (
-    <input
-        className={styles.input}
-        type={type}
-        placeholder={placeholder}
-        onChange={onChange}
-    ></input>
+  <input
+    className={styles.input}
+    type={type}
+    placeholder={placeholder}
+    onChange={onChange}
+  ></input>
 )
 
 Input.defaultProps = {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './Spacer.module.css'
 
-import { getSize } from "./helpers";
+import { getSize } from './helpers'
 
 const Vertical = ({ size, maxHeight, isVisible }) => (
   <div

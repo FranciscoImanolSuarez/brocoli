@@ -6,9 +6,9 @@ export default {
   component: Heading,
   decorators: [
     (Story) => (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <Story />
-        </div>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <Story />
+      </div>
     ),
   ],
 }
@@ -16,19 +16,33 @@ export default {
 export const Default = () => <Heading>Default Heading</Heading>
 
 export const Colors = () => (
-    <>
-      <Heading color="default">Default Color</Heading>
-      <Heading color="primary">Primary Color</Heading>
-    </>
+  <>
+    <Heading color="default">Default Color</Heading>
+    <Heading color="primary">Primary Color</Heading>
+  </>
 )
 
 export const Sizes = () => (
-    <>
-      <Heading size="xs">Extra Small Size</Heading>
-      <Heading size="xs">Small Size</Heading>
-      <Heading size="md">Medium Size</Heading>
-      <Heading size="lg">Large Size</Heading>
-      <Heading size="xl">Extra Large Size</Heading>
-      <Heading size="2xl">Double Extra Large Size</Heading>
-    </>
+  <>
+    <Heading size="xs">
+      El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña toca el
+      saxofón detrás del palenque de paja. 1234567890
+    </Heading>
+    <Heading size="md">
+      El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña toca el
+      saxofón detrás del palenque de paja. 1234567890
+    </Heading>
+    <Heading size="lg">
+      El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña toca el
+      saxofón detrás del palenque de paja. 1234567890
+    </Heading>
+    <Heading size="xl">
+      El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña toca el
+      saxofón detrás del palenque de paja. 1234567890
+    </Heading>
+    <Heading size="2xl">
+      El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña toca el
+      saxofón detrás del palenque de paja. 1234567890
+    </Heading>
+  </>
 )

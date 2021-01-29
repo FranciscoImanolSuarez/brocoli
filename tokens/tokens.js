@@ -245,6 +245,9 @@ const decisions = {
   button: {
     maxWidth: '300px',
   },
+  input: {
+    heigth: '38px',
+  },
 }
 
 module.exports = { choices, decisions }

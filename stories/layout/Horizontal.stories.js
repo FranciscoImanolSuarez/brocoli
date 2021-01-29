@@ -2,11 +2,11 @@ import React from 'react'
 import Spacer from '../../atomic/layout/Spacer'
 
 export default {
-    title: 'Layout/Spacer/Horizontal',
-    component: Spacer,
-    args: {
-        isVisible: true,
-    },
+  title: 'Layout/Spacer/Horizontal',
+  component: Spacer,
+  args: {
+    isVisible: true,
+  },
 }
 
 const Template = (props) => <Spacer.Horizontal {...props} />
@@ -15,20 +15,20 @@ export const Default = Template.bind({})
 
 export const ExtraSmall = Template.bind({})
 ExtraSmall.args = {
-    size: 'xs',
+  size: 'xs',
 }
 
 export const Small = Template.bind({})
 Small.args = {
-    size: 'sm',
+  size: 'sm',
 }
 
 export const Medium = Template.bind({})
 Medium.args = {
-    size: 'md',
+  size: 'md',
 }
 
 export const Large = Template.bind({})
 Large.args = {
-    size: 'lg',
+  size: 'lg',
 }

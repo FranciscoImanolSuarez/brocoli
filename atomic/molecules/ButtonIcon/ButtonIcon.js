@@ -5,16 +5,16 @@ import Button from '../../atoms/Button'
 import Icon from '../../atoms/Icon'
 import Spacer from '../../layout/Spacer'
 const ButtonIcon = ({ children, type, icon }) => (
-    <Button type={type} isBlock={false}>
-        {children}
-        <Spacer.Vertical size="xs"></Spacer.Vertical>
-        <Icon type={icon} />
-    </Button>
+  <Button type={type} isBlock={false}>
+    {children}
+    <Spacer.Vertical size="xs"></Spacer.Vertical>
+    <Icon type={icon} />
+  </Button>
 )
 
 ButtonIcon.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf[('primary', 'secondary', 'tertiary')],
+  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   icon: PropTypes.string.isRequired,
 }
 

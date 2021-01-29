@@ -1,6 +1,8 @@
+// FIXME: Move as static file
+
+import 'minireset.css'
 import '../styles/main.css'
 import '../styles/tokens.css'
-
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-}
+//export const parameters = {
+  //actions: { argTypesRegex: '^on[A-Z].*' },
+//}
