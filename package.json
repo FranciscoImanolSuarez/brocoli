@@ -10,8 +10,9 @@
     "lint": "eslint .",
     "prettier": "prettier --write .",
     "storybook": "start-storybook -p 6006 -s ./assets",
-    "build-storybook": "build-storybook",
-    "build-custom-properties": "node ./scripts/build-tokens"
+    "build-storybook": "build-storybook -s ./assets",
+    "build-custom-properties": "node ./scripts/build-tokens",
+    "chromatic": "npx chromatic --project-token aaddfa7b0300"
   },
   "author": "Francisco Imanol Suarez",
   "license": "MIT",
@@ -26,6 +27,7 @@
     "@storybook/react": "^6.1.11",
     "babel-jest": "26.6.3",
     "babel-loader": "^8.2.2",
+    "chromatic": "5.6.1",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.1",
