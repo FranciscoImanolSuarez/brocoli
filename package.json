@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "prettier": "prettier --write .",
     "storybook": "start-storybook -p 6006 -s ./assets",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s ./assets",
     "build-custom-properties": "node ./scripts/build-tokens",
     "chromatic": "npx chromatic --project-token aaddfa7b0300"
   },
