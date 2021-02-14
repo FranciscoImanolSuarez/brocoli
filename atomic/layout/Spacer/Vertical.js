@@ -1,20 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import './Spacer.module.css'
+import styles from './Spacer.module.css'
 
 import { getSize } from './helpers'
 
 const Vertical = ({ size, maxHeight, isVisible }) => (
   <div
-    className={classNames('spacer', {
-      'is-visible': isVisible,
+    className={classNames(styles.spacer, styles.vertical, {
+      [styles['is-visible']]: isVisible,
     })}
     style={{
-      display: 'block',
       width: getSize(size),
       maxHeight,
-      height: '100vh',
     }}
   />
 )
