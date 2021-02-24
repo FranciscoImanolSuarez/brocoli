@@ -308,3 +308,4 @@ package-lock.json
 TODO.txt
 !atoms/Icon
 storybook-static
+.github

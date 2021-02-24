@@ -1,8 +1,6 @@
 const { choices, decisions } = require('../tokens/tokens')
 const fs = require('fs')
-
-const toKebabCase = (string) =>
-  string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()
+const  toKebabCase = require('../utils/kebabCase')
 
 function transformTokens(parentKey, object) {
   const objectKeys = Object.keys(object)
@@ -39,7 +37,7 @@ function buildTokens() {
 
   fs.writeFile('./styles/tokens.css', data, 'utf8', function (error) {
     if (error) {
-      return console.error(error)
+     throw error
     }
     console.log('🎨 Custom properties created!')
   })

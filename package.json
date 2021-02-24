@@ -11,7 +11,8 @@
     "prettier": "prettier --write .",
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-storybook": "build-storybook -s ./assets",
-    "build-custom-properties": "node ./scripts/build-tokens",
+    "build-tokens": "node ./scripts/build-tokens",
+    "create-component": "node ./scripts/create-component.js",
     "chromatic": "npx chromatic --project-token aaddfa7b0300"
   },
   "author": "Francisco Imanol Suarez",
@@ -43,6 +44,7 @@
     "semantic-release": "17.3.7"
   },
   "dependencies": {
+    "enquirer": "2.3.6",
     "eslint-plugin-react": "^7.22.0",
     "minireset.css": "0.0.7",
     "react-addons-test-utils": "15.6.2",
@@ -58,7 +60,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "build tokens && lint-staged"
     }
   },
   "lint-staged": {

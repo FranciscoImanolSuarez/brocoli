@@ -9,6 +9,9 @@ export { default as Card } from './atomic/atoms/Card'
 
 // Layout
 export { default as Spacer } from './atomic/layout/Spacer'
+export { default as Container } from './atomic/layout/Container'
+export { default as CenteredContent } from './atomic/layout/CenteredContent'
+export { default as FullHeightContent } from './atomic/layout/FullHeightContent'
 
 // Molecules
 export { default as Dropdown } from './atomic/molecules/Dropdown'
