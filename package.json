@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "yarn storybook",
     "test": "jest",
-    "lint": "eslint .",
+    "lint":"yarn lint-js && yarn lint-css",
+    "lint-css":"stylelint \"**/*.css\"",
+    "lint-js": "eslint .",
     "prettier": "prettier --write .",
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-storybook": "build-storybook -s ./assets",
@@ -60,7 +62,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "build tokens && lint-staged"
+      "pre-commit": "yarn build-tokens && lint-staged"
     }
   },
   "lint-staged": {
