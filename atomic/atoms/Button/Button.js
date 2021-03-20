@@ -2,30 +2,44 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import styles from './Button.module.css'
+import Heading from '../Heading'
 
-const Button = ({ type, children, isBlock, onClick }) => (
+import styles from './Button.module.css'
+import { options } from './contants'
+
+const Button = ({ type, children, addons, isMuted, isInline, onClick }) => (
   <button
     className={classNames(styles.button, {
       [styles[`type-${type}`]]: type,
-      [styles['is-block']]: isBlock && type !== 'tertiary',
+      [styles['is-inline']]: isInline || type === 'tertiary',
+      [styles['is-muted']]: isMuted && type === 'primary',
     })}
     onClick={onClick}
   >
-    {children}
+    {addons && addons.prepend}
+    <Heading color={type === 'primary' ? 'inverted' : 'primary'}>
+      {children}
+    </Heading>
+    {addons && addons.append}
   </button>
 )
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  children: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(options.types),
+  addons: PropTypes.shape({
+    prepend: PropTypes.node,
+    append: PropTypes.node,
+  }),
   onClick: PropTypes.func,
-  isBlock: PropTypes.bool,
+  isInline: PropTypes.bool,
+  isMuted: PropTypes.bool,
 }
 
 Button.defaultProps = {
-  isBlock: true,
+  type: 'primary',
   onClick: () => {},
+  isInline: false,
 }
 
 export default Button

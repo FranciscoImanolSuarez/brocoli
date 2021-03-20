@@ -7,12 +7,12 @@
   "scripts": {
     "dev": "yarn storybook",
     "test": "jest",
-    "lint":"yarn lint-js && yarn lint-css",
-    "lint-css":"stylelint \"**/*.css\"",
+    "lint": "yarn lint-js && yarn lint-css",
+    "lint-css": "stylelint \"**/*.css\"",
     "lint-js": "eslint .",
     "prettier": "prettier --write .",
-    "storybook": "start-storybook -p 6006 -s ./assets",
-    "build-storybook": "build-storybook -s ./assets",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "build-tokens": "node ./scripts/build-tokens",
     "create-component": "node ./scripts/create-component.js",
     "chromatic": "npx chromatic --project-token aaddfa7b0300"
@@ -20,30 +20,38 @@
   "author": "Francisco Imanol Suarez",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.12.10",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-react": "7.12.10",
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/addon-storyshots": "6.1.15",
-    "@storybook/react": "^6.1.11",
-    "babel-jest": "26.6.3",
-    "babel-loader": "^8.2.2",
-    "chromatic": "5.6.1",
-    "eslint": "^7.17.0",
-    "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "husky": ">=4",
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "@babel/preset-react": "7.10.4",
+    "@storybook/addon-actions": "6.1.21",
+    "@storybook/addon-essentials": "6.1.21",
+    "@storybook/addon-links": "6.1.21",
+    "@storybook/react": "6.1.21",
+    "babel-jest": "26.3.0",
+    "babel-loader": "8.1.0",
+    "chromatic": "5.2.0",
+    "concurrently": "5.3.0",
+    "enquirer": "2.3.6",
+    "eslint": "7.8.1",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.22.0",
+    "husky": "4.2.5",
     "identity-obj-proxy": "3.0.0",
-    "jest": "26.6.3",
-    "lint-staged": ">=10",
-    "prettier": "^2.2.1",
-    "react": "^17.0.1",
-    "react-dom": "16.13.1",
-    "react-test-render": "1.1.2",
-    "react-test-renderer": "17.0.1",
-    "semantic-release": "17.3.7"
+    "jest": "26.4.2",
+    "lint-staged": "10.3.0",
+    "minireset.css": "0.0.7",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.1.1",
+    "react": "16.13.1",
+    "react-is": "16.13.1",
+    "react-test-renderer": "16.13.1",
+    "semantic-release": "17.1.2",
+    "stylelint": "13.7.2",
+    "stylelint-config-idiomatic-order": "8.1.0",
+    "stylelint-config-recommended": "3.0.0",
+    "watch": "1.0.2",
+    "react-dom": "16.13.1"
   },
   "dependencies": {
     "enquirer": "2.3.6",
@@ -53,8 +61,7 @@
     "react-is": "^17.0.1"
   },
   "peerDependencies": {
-    "minireset.css": "0.0.7",
-    "react": "^17.0.1"
+    "react": "16.13.1"
   },
   "repository": {
     "type": "git",
@@ -62,10 +69,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build-tokens && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.js": "yarn lint:js",
+    "*.css": "yarn lint:css"
   }
 }

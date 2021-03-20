@@ -1,33 +1,36 @@
 import React from 'react'
-import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-import styles from './Paragraph.module.css';
+import styles from './Paragraph.module.css'
+import { options } from './constants'
+import { getClasses } from '../../../helpers/styles'
 
-const Paragraph = ( { children, size, color, weight } ) => {
-    return (
-        <div 
-        className={classNames(styles['paragraph'], {
-            [styles[`color-${color}`]]: color,
-            [styles[`size-${size}`]]: size,
-            [styles[`weight-${weight}`]]: weight,
-        })}
-        >
-            {children}
-        </div>
-    );
-};
+const Paragraph = ({ children, className, size, color, weight, isStriked }) => {
+  const classes = getClasses(styles)({ color, size, weight })
+  return (
+    <div
+      className={classes(className, 'paragraph', ['color', 'size', 'weight'], {
+        'is-striked': isStriked,
+      })}
+    >
+      {children}
+    </div>
+  )
+}
 
 Paragraph.propTypes = {
-    children: PropTypes.node.isRequired,
-    color: PropTypes.oneOf[('default', 'muted')],
-    size: PropTypes.oneOf[('sm', 'md', 'lg')],
-    weight: PropTypes.oneOf[('medium','normal')]
+  children: PropTypes.node.isRequired,
+  color: PropTypes.oneOf(options.colors),
+  size: PropTypes.oneOf(options.sizes),
+  weight: PropTypes.oneOf(options.weights),
+  className: PropTypes.string,
+  isStriked: PropTypes.bool,
 }
 
 Paragraph.defaultProps = {
-    size: 'md',
-    color: 'default',
-    weight: 'medium'
+  color: 'base',
+  size: 'md',
+  weight: 'normal',
 }
+
 export default Paragraph

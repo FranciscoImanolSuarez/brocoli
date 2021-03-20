@@ -1,11 +1,16 @@
 .heading {
-  line-height: var(--line-height-tight);
-  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
   font-family: var(--font-family-sans);
+  line-height: var(--line-height-tight);
 }
 
-.color-default {
+.color-base {
   color: var(--color-font-base);
+}
+
+.color-inverted {
+  color: var(--color-font-inverted);
 }
 
 .color-primary {
@@ -34,4 +39,12 @@
 
 .size-2xl {
   font-size: var(--font-size-2xl);
+}
+
+.weight-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.weight-bold {
+  font-weight: var(--font-weight-bold);
 }

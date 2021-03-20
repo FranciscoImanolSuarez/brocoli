@@ -1,11 +1,11 @@
-
-html, body {
-  font-size: var(--font-size-base);
-  font-family: var(--font-family-sans);
+html,
+body {
   height: 100%;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
 }
 
-
+#root,
 #__next {
   height: 100%;
 }

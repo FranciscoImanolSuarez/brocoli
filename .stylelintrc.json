@@ -1,14 +1,14 @@
 {
-    "extends": [
-      "stylelint-config-recommended",
-      "stylelint-config-idiomatic-order"
-    ],
-    "rules": {
-      "selector-pseudo-class-no-unknown": [
-        true,
-        {
-          "ignorePseudoClasses": ["global"]
-        }
-      ]
-    }
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-idiomatic-order"
+  ],
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ]
   }
+}

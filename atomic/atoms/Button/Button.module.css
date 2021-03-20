@@ -1,28 +1,21 @@
 .button {
   display: inline-flex;
+  width: 100%;
+  min-width: max-content;
+  height: 45px;
   align-items: center;
   justify-content: center;
-  border: var(--border-width-default) solid var(--color-transparent);
   padding: 10px 20px;
-  border-radius: var(--border-radius-lg);
+  border: var(--border-width-thin) solid var(--color-base-transparent);
+  border-radius: var(--button-border-radius-base);
   box-shadow: var(--box-shadow-sm);
   cursor: pointer;
-  transition: all 0.5s ease;
-  font-size: var(--font-size-md);
-  max-width: var(--button-max-width);
-  min-width: max-content;
-  font-family: var(--font-family-sans);
-  font-weight: var(--font-weight-bold);
-  height: var(--input-heigth);
+  transition: filter 0.5s ease, box-shadow 0.2s ease;
 }
 
-.is-block {
-  width: 100%;
-}
-
-.type-primary {
-  background: var(--color-primary);
-  color: var(--color-white);
+.button:focus {
+  box-shadow: 0 0 0 1px var(--color-primary), 0 0 10px 0 var(--color-primary);
+  outline: none;
 }
 
 .button:hover {
@@ -33,18 +26,37 @@
   filter: brightness(0.9);
 }
 
+.type-primary {
+  background: var(--color-primary);
+}
+
+.type-primary:focus {
+  box-shadow: 0 0 0 1px var(--color-primary-inverted),
+    0 0 10px 0 var(--color-primary);
+}
+
 .type-secondary {
-  background: var(--color-transparent);
-  color: var(--color-brand-medium-purple);
-  border: 1px solid var(--color-brand-medium-purple);
+  border: var(--border-width-thin) solid var(--color-primary);
+  background: var(--color-base-transparent);
 }
 
 .type-tertiary {
-  background: var(--color-transparent);
-  color: var(--color-primary);
-  box-shadow: var(--box-shadow-none);
+  height: 25px;
   padding: 0;
   border-bottom: 1px solid var(--color-primary);
+  background: var(--color-base-transparent);
   border-radius: var(--border-radius-none);
-  height: auto;
+  box-shadow: var(--shadows-none);
+}
+
+.type-tertiary:focus {
+  box-shadow: 0 10px 10px -8px var(--color-primary);
+}
+
+.button.is-inline {
+  max-width: max-content;
+}
+
+.is-muted {
+  background: var(--color-primary-muted);
 }

@@ -1,28 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import className from 'classnames'
 
 import styles from './Input.module.css'
+import { options } from './constants'
 
-const Input = ({ type, onChange, placeholder }) => (
+const Input = ({ type, value, isInline, onChange, placeholder }) => (
   <input
-    className={styles.input}
+    className={className(styles.input, {
+      [styles['is-inline']]: isInline,
+    })}
     type={type}
+    value={value}
     placeholder={placeholder}
     onChange={onChange}
   ></input>
 )
 
-Input.defaultProps = {
-  type: 'text',
-  //value: '',
-  placeholder: '',
+Input.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  type: PropTypes.oneOf(options.types),
+  value: PropTypes.string,
+  placeholder: PropTypes.string,
+  isInline: PropTypes.bool,
 }
 
-Input.propTypes = {
-  children: PropTypes.node.isRequired,
-  onChange: PropTypes.func.isRequired,
-  type: PropTypes.oneOf['text'],
-  //value: PropTypes.string,
-  placeholder: PropTypes.string,
+Input.defaultProps = {
+  type: 'text',
+  value: '',
+  placeholder: '',
+  isInline: false,
+  onChange: () => {},
 }
+
 export default Input

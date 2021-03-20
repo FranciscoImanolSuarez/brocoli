@@ -1,1 +1,2 @@
-export { default } from './Input.js'
+export { default } from './Input'
+export { options } from './constants'

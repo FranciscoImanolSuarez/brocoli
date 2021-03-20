@@ -1,5 +1,5 @@
 import React from 'react'
-import InputIcon from '../../molecules/atoms/InputIcon'
+import InputIcon from './'
 
 export default {
     title: 'Molecules/InputIcon',
