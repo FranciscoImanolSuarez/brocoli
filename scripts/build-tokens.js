@@ -1,4 +1,4 @@
-const { choices, decisions } = require('../tokens/tokens')
+const { choices, decisions } = require('../tokens/')
 const fs = require('fs')
 const  toKebabCase = require('../utils/toKebabCase')
 

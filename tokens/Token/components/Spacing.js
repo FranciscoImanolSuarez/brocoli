@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Spacer from '../../../atomic/layout/Spacer/'
-import Helper from '../helpers'
+import Helper from '../Helper'
 
 import styles from '../Token.module.css'
 

@@ -1,30 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import toKebabCase from '../../utils/tokebabCase'
 
-import styles from './Token.module.css'
+export const getTokenItems = (tokens, tokenKey) => (group) => {
+  if (group) {
+    return Object.keys(tokens[group]).map((key) => ({
+      label: `var(--${toKebabCase(tokenKey)}-${group}-${toKebabCase(key)})`,
+      value: tokens[group][key],
+    }))
+  }
 
-const Helper = ({ label, value, children }) => {
-  return (
-    <div className={styles.container}>
-      {children}
-      <div className={styles.description}>
-        <span className={styles.label}>{label}</span>
-        <span className={styles.label}>
-          {Array.isArray(value) ? value.join(', ') : value}
-        </span>
-      </div>
-    </div>
-  )
+  return Object.keys(tokens).map((key) => ({
+    label: `var(--${toKebabCase(tokenKey)}-${toKebabCase(key)})`,
+    value: tokens[key],
+  }))
 }
-
-Helper.propTypes = {
-  label: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.arrayOf(PropTypes.string),
-  ]),
-  children: PropTypes.node.isRequired,
-}
-
-export default Helper
